@@ -14,9 +14,15 @@ app.get('/', (req, res) => {
   res.send('Welcome to the homepage ahaaaaaaaaaaaaa!');
 });
 
+// app.use(
+//   cors({
+//     origin: 'https://plannerf.aiprojectt.com',
+//     credentials: true,
+//   })
+// );
+
 app.use(
   cors({
-    origin: 'https://plannerf.aiprojectt.com',
     origin: 'http://localhost:3000',
     credentials: true,
   })
