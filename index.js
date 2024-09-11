@@ -17,6 +17,7 @@ app.get('/', (req, res) => {
 app.use(
   cors({
     origin: 'https://plannerf.aiprojectt.com',
+    origin: 'http://localhost:3000',
     credentials: true,
   })
 );
