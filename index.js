@@ -1,11 +1,11 @@
-const PORT = '8080'; // 8080 포트를 사용
-const express = require('express'); // express 모듈 사용
-const cors = require('cors'); // cors 모듈 사용
+const PORT = '8080';
+const express = require('express');
+const cors = require('cors');
 const cookieParser = require('cookie-parser');
 const path = require('path');
-const multer = require('multer'); // multer 모듈 사용
+const multer = require('multer');
 
-const app = express(); // express 모듈을 app 변수 할당
+const app = express();
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -67,10 +67,9 @@ app.post('/upload', upload.single('planner_img'), (req, res) => {
   }
 });
 
-// 다른 라우트 설정
 app.use(require('./routes/getRoutes'));
 app.use(require('./routes/postRoutes'));
 app.use(require('./routes/updateRoutes'));
 app.use(require('./routes/deleteRoutes'));
 
-app.listen(PORT, () => console.log(`Server is running on ${PORT}`)); // 서버 실행 시 메시지 출력
+app.listen(PORT, () => console.log(`Server is running on ${PORT}`));
