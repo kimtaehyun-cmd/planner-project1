@@ -14,20 +14,20 @@ app.get('/', (req, res) => {
   res.send('Welcome to the homepage ahaaaaaaaaaaaaa!');
 });
 
-app.use(
-  cors({
-    origin: 'https://plannerf.aiprojectt.com',
-    credentials: true,
-  })
-);
-
-// 수정할때
 // app.use(
 //   cors({
-//     origin: 'http://localhost:3000',
+//     origin: 'https://plannerf.aiprojectt.com',
 //     credentials: true,
 //   })
 // );
+
+수정할때;
+app.use(
+  cors({
+    origin: 'http://localhost:3000',
+    credentials: true,
+  })
+);
 
 app.use(cookieParser());
 
