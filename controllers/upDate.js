@@ -96,8 +96,8 @@ exports.updatePlannerTitle = async (req, res) => {
 
   try {
     await database.query(
-      'UPDATE travel_project SET project_title = $1, start_date = $2, end_date = $3 WHERE project_idx = $4',
-      [project_title, start_date, end_date, project_idx]
+      'UPDATE travel_project SET project_title = $1 WHERE project_idx = $2',
+      [project_title, project_idx]
     );
     res.status(200).json({ message: 'Project updated successfully' });
   } catch (error) {
